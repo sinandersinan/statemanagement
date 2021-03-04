@@ -3,7 +3,9 @@
     {{counter$ | async }}
   </div>
 
-  <button class="btn-dark" (click)="increment()">
+  <input #input>
+
+  <button class="btn-dark" (click)="increment(input.value)">
     Increment
   </button>
 </div>

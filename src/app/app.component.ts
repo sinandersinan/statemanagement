@@ -18,7 +18,7 @@ export class AppComponent {
     );
   }
 
-  increment(): void {
-    this.service.dispatch('INCREMENT');
+  increment(message): void {
+    this.service.dispatch(message);
   }
 }
