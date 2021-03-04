@@ -17,7 +17,7 @@ export class StateService {
   incrementCounter(): void {
     this.state = {
       ...this.state,
-      counter: this.state.counter++
+      counter: this.state.counter + 1
     },
     this.state$.next(this.state);
   }
