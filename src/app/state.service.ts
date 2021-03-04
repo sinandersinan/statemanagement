@@ -14,14 +14,33 @@ export class StateService {
 
   state$: BehaviorSubject<MyState> = new BehaviorSubject<MyState>(this.state);
 
-  incrementCounter(): void {
-    this.state = {
-      ...this.state,
-      counter: this.state.counter + 1
-    },
+  dispatch(message: string): void {
+    this.state = this.calculateState(this.state, message);
     this.state$.next(this.state);
   }
 
-  constructor() {
+  calculateState(state: MyState, message: string): MyState {
+    switch (message) {
+      case 'INCREMENT': {
+        return {
+          ...state,
+          counter: state.counter + 1
+        };
+      }
+      case 'DECREMENT': {
+        return {
+          ...state,
+          counter: state.counter - 1
+        };
+      }
+      case 'RESET': {
+        return {
+          ...state,
+          counter: 0
+        };
+      }
+      default:
+        return state;
+    }
   }
 }

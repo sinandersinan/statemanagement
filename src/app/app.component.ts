@@ -17,4 +17,8 @@ export class AppComponent {
       map(state => state.counter)
     );
   }
+
+  increment(): void {
+    this.service.dispatch('INCREMENT');
+  }
 }
