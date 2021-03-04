@@ -1,6 +1,6 @@
 # Statemanagement
 
-This project purpose is to learn NgRx, respectively to learn how Statemanagement works within Angular-Enviroment.
+This project purpose is to learn NgRx, respectively to learn how Statemanagement works within Angular-Enviroment. This project describes main steps of redux pattern without using NgRx: Emulating Redux 
 
 The project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.3.
 
