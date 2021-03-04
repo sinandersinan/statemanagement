@@ -1,5 +1,9 @@
 <div class="container">
   <div class="alert-info">
-    Dies
+    {{service.state.counter}}
   </div>
+
+  <button class="btn-dark" (click)="service.incrementCounter()">
+    Increment
+  </button>
 </div>
